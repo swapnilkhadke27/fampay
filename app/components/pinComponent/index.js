@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Image, TouchableOpacity, Platform } from 'react-native';
 import styles from './styles'
 import Images from '../../helpers/Images'
 
@@ -98,8 +98,8 @@ export default class PinComponent extends Component {
 
     renderInputPin = () => {
         return(
-            <View style={{flex: 1}}>
-                <Text style={styles.subheader_text}>{this.props.subheader}</Text>
+            <View>
+                {this.props.subheader ? <Text style={styles.subheader_text}>{this.props.subheader}</Text> : null}
                 <Text style={styles.desc_text}>{this.props.description}</Text>
                 <View style={styles.body_container}>
                     {this.renderInputContainer("input_1", this.state.input_1)}
@@ -188,15 +188,15 @@ export default class PinComponent extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <View style={styles.mainContainer}>
+                {/* <View style={Platform.OS == 'android' ? '' : styles.mainContainer}> */}
                     {this.renderHeader()}
                     {this.renderInputPin()}
                     {this.renderPinDescription()}
-                </View>
-                <View style={styles.bodyContainer}>
+                {/* </View>
+                <View style={Platform.OS == 'android' ? '' : styles.bodyContainer}> */}
                     {this.renderButtons()}
                     {this.renderSubmitButton()}
-                </View>
+                {/* </View> */}
             </View>
         )
     }

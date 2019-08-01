@@ -5,11 +5,12 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 export default StyleSheet.create({
     container: {
       flex: 1,
-      padding : 16,
+      paddingLeft : 16,
+      paddingRight : 16,
       backgroundColor: 'white'
     },
     header_container:{
-        flex: 0.5
+        // flex: 0.5
     },
     header_text:{
       fontSize: 30,
@@ -18,6 +19,7 @@ export default StyleSheet.create({
     },
     subheader_text:{
       fontSize: 22,
+      marginTop : 12,
     //   fontFamily: Fonts.regular
     },
     welcome_text:{
@@ -27,7 +29,7 @@ export default StyleSheet.create({
     },
     desc_text:{
       fontSize: 16,
-      marginTop : 30,
+      marginTop : 24,
       fontWeight: '600',
     //   fontFamily: Fonts.regular
     },

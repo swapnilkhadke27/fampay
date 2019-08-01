@@ -4,6 +4,6 @@ export default StyleSheet.create({
     applicationView: {
       flex: 1,
       backgroundColor: 'white',
-      paddingTop : Platform.OS == 'android' ? 30 : 0
+      // paddingTop : Platform.OS == 'android' ? 30 : 0
     },
 })
